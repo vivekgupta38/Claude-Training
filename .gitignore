@@ -1,0 +1,9 @@
+# Playwright MCP output (screenshots, snapshots, console logs)
+.playwright-mcp/
+
+# Local Claude Code settings
+.claude/settings.local.json
+
+# OS junk
+Thumbs.db
+.DS_Store

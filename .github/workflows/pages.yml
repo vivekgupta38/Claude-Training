@@ -24,8 +24,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: Stage site
         run: |
-          mkdir _site
+          mkdir -p _site/v2
           cp index.html _site/
+          cp v2/index.html _site/v2/
           touch _site/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

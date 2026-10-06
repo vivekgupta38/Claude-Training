@@ -6,6 +6,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A single-file IT PMO Kanban board, used as an internal demo/training tool for a fictitious bank. Everything lives in `index.html`: the markup, one `<style>` block and one `<script>` block.
 
+There are two versions, each self-contained and deployed side by side by `.github/workflows/pages.yml`:
+- `index.html`: the classic board, served at the Pages root. Leave it unchanged unless asked.
+- `v2/index.html`: the redesign, served at `/v2/`. It has the same script architecture, plus a "Board health" strip of SVG ring charts. `renderSummary(tasks)` draws them from the filtered task list. It also has its own palette tokens: status hues and a priority ramp, validated for colour-blind separation. It links back to the classic board via `../index.html`.
+
 ## Running
 
 There is no build, lint or test tooling, and no package manager. To run the app, open `index.html` directly in a browser (on Windows: `Start-Process index.html`). Node is not installed on this machine, so the JS can't be syntax-checked from the CLI. Verify changes in the browser console instead.
